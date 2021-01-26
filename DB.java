@@ -4,8 +4,6 @@ import java.util.Map.Entry;
 
 public class DB {
 	static HashMap<Integer, String> id_name = new HashMap<Integer, String>();
-	static HashMap<Integer, String> id_name2 = new HashMap<Integer, String>();
-	static HashMap<Integer, String> id_name3 = new HashMap<Integer, String>();
 	static HashMap<String, String> acc_type = new HashMap<String, String>();
 	static HashMap<String, String> acc_status = new HashMap<String, String>(); 
 	
@@ -15,40 +13,50 @@ public class DB {
 		String key;
 		String typekey;
 		
-		System.out.println("DATA SET 1");
+		System.out.println("DATA SET 1:");
 		for (int x = 0; x < id_name.size(); x++) {
 			
-			System.out.print(id_name.get(x)+"\t"+"     ");				//SELECT * FROM id_name
 			key = id_name.get(x);
-			System.out.print(acc_type.get(key)+"\t");
-			typekey = acc_type.get(key);			
-			System.out.println(acc_status.get(typekey));	
+			typekey = acc_type.get(key);	
+			
+			if (typekey.equals("Type1")) {
+				System.out.print(id_name.get(x)+"\t"+"     ");				//SELECT Type1 FROM id_name			
+				System.out.print(acc_type.get(key)+"\t");		
+				System.out.println(acc_status.get(typekey));				
+			}
+				
 			
 		}
 		
 		System.out.println("\n");
 		
-		System.out.println("DATA SET 2");
-		for (int x = 0; x < id_name2.size(); x++) {
+		System.out.println("DATA SET 2:");
+		for (int x = 0; x < id_name.size(); x++) {
 			
-			System.out.print(id_name2.get(x)+"\t"+"     ");				//SELECT * FROM id_name2
 			key = id_name.get(x);
-			System.out.print(acc_type.get(key)+"\t");
-			typekey = acc_type.get(key);			
-			System.out.println(acc_status.get(typekey));	
+			typekey = acc_type.get(key);	
+			
+			if (typekey.equals("Type2")) {
+				System.out.print(id_name.get(x)+"\t"+"     ");				//SELECT Typ2 FROM id_name		
+				System.out.print(acc_type.get(key)+"\t");		
+				System.out.println(acc_status.get(typekey));				
+			}	
 			
 		}
 		
 		System.out.println("\n");	
 		
-		System.out.println("DATA SET 3");
-		for (int x = 0; x < id_name3.size(); x++) {
+		System.out.println("DATA SET 3:");
+		for (int x = 0; x < id_name.size(); x++) {
 			
-			System.out.print(id_name3.get(x)+"\t"+"     ");				//SELECT * FROM id_name3
 			key = id_name.get(x);
-			System.out.print(acc_type.get(key)+"\t");
-			typekey = acc_type.get(key);			
-			System.out.println(acc_status.get(typekey));
+			typekey = acc_type.get(key);	
+			
+			if (typekey.equals("Type3")) {
+				System.out.print(id_name.get(x)+"\t"+"     ");				//SELECT Type3 FROM id_name			
+				System.out.print(acc_type.get(key)+"\t");		
+				System.out.println(acc_status.get(typekey));				
+			}
 			
 		}
 	}
